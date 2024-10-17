@@ -1,0 +1,5 @@
+npm install react react-dom
+npm install react-router-dom
+npm install @reduxjs/toolkit react-redux
+npm install axios
+npm install json-server
