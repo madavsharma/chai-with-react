@@ -1,0 +1,232 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #c2c2f0, #e6e6ff); /* Soft background gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height */
+    color: #333;
+}
+
+/* Quiz, Result, and Home Containers */
+.quiz-container, .result-container, .home-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff; /* White background for content */
+    padding: 20px;
+    border-radius: 20px; /* Slightly more rounded corners for a modern look */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease; /* Smooth hover transition */
+}
+
+.quiz-container:hover, .result-container:hover, .home-container:hover {
+    transform: translateY(-8px); /* Lift the container higher on hover */
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #e9ecef; /* Light grey for background */
+    border-radius: 15px; /* Rounded corners */
+    height: 12px; /* Slightly thicker progress bar */
+    margin-bottom: 20px;
+    overflow: hidden; /* Clip overflowing content */
+}
+
+.progress-bar-fill {
+    background-color: #007bff; /* Primary color for progress fill */
+    height: 100%; /* Fill height */
+    border-radius: 15px; /* Rounded corners */
+    transition: width 0.3s; /* Smooth transition for progress change */
+}
+
+/* Question and Answer Buttons */
+h1, h2 {
+    margin: 0; /* Reset margin */
+}
+
+h2 {
+    font-size: 1.6rem; /* Slightly larger question heading size */
+    margin-bottom: 20px; /* Spacing below */
+}
+
+.options button {
+    background-color: #FF6347; /* Tomato color for buttons */
+    color: #fff; /* White text */
+    padding: 12px; /* Increased padding */
+    width: 100%; /* Full width */
+    margin: 12px 0; /* Vertical spacing */
+    border: none; /* Remove default border */
+    border-radius: 30px; /* More rounded edges for a modern feel */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Transition effects */
+}
+
+.options button:hover {
+    background-color: #FF4500; /* Darker color on hover */
+    transform: scale(1.08); /* Stronger scale effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow effect on hover */
+}
+
+/* Selected Button */
+.options button.selected {
+    background-color: #28a745; /* Green for selected */
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    margin-top: 20px; /* Spacing above */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between buttons */
+}
+
+.navigation-buttons button {
+    padding: 12px 24px; /* Increased padding */
+    border-radius: 30px; /* Rounded edges */
+    border: none; /* Remove default border */
+    font-size: 1.1rem; /* Increased font size */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.navigation-buttons button:first-child {
+    background-color: #6c757d; /* Gray for Go Back */
+    color: white; /* White text */
+}
+
+.navigation-buttons button:last-child {
+    background-color: #FF6347; /* Tomato for Next or Submit */
+    color: white; /* White text */
+}
+
+/* Hover effect for navigation buttons */
+.navigation-buttons button:hover {
+    background-color: #FF4500; /* Darker color on hover */
+    transform: scale(1.08); /* Stronger scale effect on hover */
+}
+
+/* Timer Style */
+.timer {
+    font-size: 1.1rem; /* Slightly increased timer font size */
+    margin-top: 10px; /* Spacing above */
+    color: #FF4500; /* Color for timer text */
+}
+
+/* Result Styling */
+.result-container {
+    width: 100%;
+    max-width: 400px; /* Set max width */
+    background-color: #fff; /* White background for content */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: center; /* Center text */
+}
+
+.result-container h1 {
+    font-size: 2.2rem; /* Slightly larger result heading */
+    margin-bottom: 20px; /* Spacing below */
+}
+
+.result-container .score {
+    font-size: 1.7rem; /* Larger score font size */
+    font-weight: bold; /* Bold score */
+    margin: 20px 0; /* Vertical spacing */
+}
+
+/* Result Message */
+.result-message {
+    font-size: 1.3rem; /* Larger message font size */
+    margin: 10px 0; /* Spacing above and below */
+    color: #333; /* Message color */
+}
+
+/* Play Again Button */
+.play-again-button {
+    padding: 12px 24px; /* Button padding */
+    border-radius: 30px; /* Rounded edges */
+    border: none; /* Remove default border */
+    background-color: #FF6347; /* Tomato color */
+    color: white; /* White text */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+    display: flex; /* Flexbox to align icon and text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin: 20px auto; /* Center horizontally */
+    width: 80%; /* Set width to make it centered */
+}
+
+.play-again-button:hover {
+    background-color: #FF4500; /* Darker color on hover */
+    transform: scale(1.08); /* Scale effect on hover */
+}
+
+.play-again-button i {
+    margin-right: 5px; /* Spacing between icon and text */
+}
+
+/* Start Button */
+.start-button {
+    padding: 12px 24px; /* Button padding */
+    border-radius: 30px; /* Rounded edges */
+    border: none; /* Remove default border */
+    background-color: #FF6347; /* Tomato color */
+    color: white; /* White text */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+    display: flex; /* Flexbox to align icon and text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin: 20px auto; /* Center horizontally */
+    width: 80%; /* Set width to make it centered */
+}
+
+.start-button:hover {
+    background-color: #FF4500; /* Darker color on hover */
+    transform: scale(1.08); /* Scale effect on hover */
+}
+
+.start-button i {
+    margin-right: 5px; /* Spacing between icon and text */
+}
+
+/* Home Container */
+.home-container {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    padding: 20px;
+}
+
+/* Logo Style */
+.quiz-logo {
+    width: 150px; /* Increased size for the logo */
+    height: 150px; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Spacing below the logo */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .quiz-container, .result-container, .home-container {
+        width: 90%; /* Full width on small screens */
+        padding: 10px; /* Reduced padding */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduced heading size */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Reduced subheading size */
+    }
+
+    .options button {
+        font-size: 0.9rem; /* Smaller button font size */
+    }
+
+    .navigation-buttons button {
+        padding: 8px; /* Smaller button padding */
+    }
+}
