@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import '../styles.css'; // Import the global stylesheet
-import quizLogo from '../assets/upraised(1).png'; 3
+import quizLogo from '../assets/upraised(1).png'; 
 
 const Home = () => {
   const navigate = useNavigate();
