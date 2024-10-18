@@ -5,7 +5,7 @@ This is a Quiz Web Application built using React. It evaluates users on various 
 
 ## Features
 - Dynamic quiz questions fetched from an API.
-- Multiple choice questions.
+- Single choice questions.
 - Timer for each question.
 - Quiz result with scoring.
 
