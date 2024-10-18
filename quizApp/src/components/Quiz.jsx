@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ProgressBar from './ProgressBar';
-import '../styles.css'; // Import the styles
+import '../styles.css'; 
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -10,7 +10,7 @@ const Quiz = () => {
   const [progress, setProgress] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [timer, setTimer] = useState(15); // Timer for each question
+  const [timer, setTimer] = useState(15); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Quiz = () => {
       const timerId = setInterval(() => setTimer((prev) => prev - 1), 1000);
       return () => clearInterval(timerId);
     } else if (timer === 0) {
-      goNext(); // Auto-move to the next question if time runs out
+      goNext(); 
     }
   }, [timer, loading]);
 
@@ -65,9 +65,9 @@ const Quiz = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
-      setTimer(15); // Reset timer for the next question
+      setTimer(15); 
     } else {
-      submitQuiz(); // Submit the quiz if it's the last question
+      submitQuiz(); 
     }
     setProgress(((nextQuestion) / questions.length) * 100);
   };
@@ -84,9 +84,9 @@ const Quiz = () => {
     <div className="quiz-container">
       <h1>Quiz Time!</h1>
       <ProgressBar progress={progress} />
-      <h2>Question {currentQuestion + 1} of {questions.length}</h2> {/* Display question numbers */}
+      <h2>Question {currentQuestion + 1} of {questions.length}</h2>
       <h2>{question.question}</h2>
-      <p className="timer">Time left: {timer} seconds</p> {/* Display the timer */}
+      <p className="timer">Time left: {timer} seconds</p>
       <div className="options">
         {question.options.map((option, idx) => (
           <button
@@ -99,15 +99,15 @@ const Quiz = () => {
         ))}
       </div>
       <div className="navigation-buttons">
-        {currentQuestion > 0 && ( // Only show Go Back if not on first question
+        {currentQuestion > 0 && ( 
           <button onClick={goBack} disabled={currentQuestion === 0}>
-            &#8592; Go Back {/* Left arrow symbol */}
+            &#8592; Go Back
           </button>
         )}
-        <div style={{ flex: 1 }} /> {/* Spacer */}
+        <div style={{ flex: 1 }} /> 
         {currentQuestion < questions.length - 1 ? (
           <button onClick={goNext} disabled={userAnswers[currentQuestion] === undefined}>
-            Next &#8594; {/* Right arrow symbol */}
+            Next &#8594;
           </button>
         ) : (
           <button onClick={submitQuiz} disabled={!allAnswered}>
