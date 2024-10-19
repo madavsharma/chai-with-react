@@ -9,7 +9,7 @@
     "id": 2,
     "question": "Which of the following is a valid binary number?",
     "options": ["1021", "1101", "2345", "5789"],
-    "correctAnswer": "1101"
+    "correctAnswer": "1101" 1
   },
   {
     "id": 3,
