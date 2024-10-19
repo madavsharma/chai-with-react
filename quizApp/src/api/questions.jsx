@@ -4,7 +4,7 @@ export default function handler(req, res) {
       id: 1,
       question: "What does 'HTML' stand for?",
       options: [
-        "HyperText Markup Language",0
+        "HyperText Markup Language",
         "HighText Machine Language",
         "HyperTech Markup Language",
         "HyperText Markdown Language"
