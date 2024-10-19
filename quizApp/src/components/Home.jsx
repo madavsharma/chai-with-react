@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import '../styles.css'; // Import the global stylesheet
-import quizLogo from '../assets/upraised(1).png'; 
+import '../styles.css'; 
+import quizLogo from '../assets/logo.png';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <img 
-        src={quizLogo} // Use the imported image here
+        src={quizLogo} 
         alt="Quiz Logo" 
         className="quiz-logo" 
       />
