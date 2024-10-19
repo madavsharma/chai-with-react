@@ -16,7 +16,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const res = await fetch('http://localhost:3000/questions');
+        const res = await fetch('./questions.json')
         if (!res.ok) throw new Error('Failed to fetch questions');
         const data = await res.json();
         setQuestions(data || []);
