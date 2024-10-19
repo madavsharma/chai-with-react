@@ -227,8 +227,8 @@ h2 {
 /* Responsive Design */
 @media (max-width: 1800px) {
     .quiz-container, .result-container, .home-container {
-        width: 500px; 
-        height: 580px;
+        width: 800px; 
+        height: 600px;
         padding: 10px; 
     }
 
