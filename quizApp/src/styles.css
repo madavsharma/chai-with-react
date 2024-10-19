@@ -31,12 +31,16 @@ body {
 .quiz-container:hover, .result-container:hover, .home-container:hover {
     transform: translateY(-8px);
 }
+.quiz-container h1{
+    margin-top: 15px;
+}
 .home-container h1{
-    margin-bottom: 10px;
+    margin-bottom: 68px;
 }
 .home-container img{
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
+    margin-top: 10px;
 }
 /* Progress Bar */
 .progress-bar {
@@ -136,7 +140,7 @@ h2 {
 
 .result-container h1 {
     font-size: 2.2rem; 
-    margin-top: 25px;
+    margin-top: 175px;
 }
 
 .result-container .score {
@@ -164,7 +168,8 @@ h2 {
     align-items: center; 
     justify-content: center;
     margin: 20px auto; 
-    width: 80%; 
+    margin-top: 30px;
+    width: 55%; 
 }
 
 .play-again-button:hover {
@@ -188,7 +193,8 @@ h2 {
     align-items: center; 
     justify-content: center; 
     margin: 20px auto; 
-    width: 80%; 
+    margin-top:0px;
+    width: 55%; 
 }
 
 .start-button:hover {
@@ -203,6 +209,7 @@ h2 {
 /* Home Container */
 .home-container {
     display: flex; 
+
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
@@ -218,9 +225,10 @@ h2 {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 1800px) {
     .quiz-container, .result-container, .home-container {
-        width: 90%; 
+        width: 500px; 
+        height: 580px;
         padding: 10px; 
     }
 
@@ -234,9 +242,14 @@ h2 {
 
     .options button {
         font-size: 0.9rem; 
+        width:300px;
     }
 
     .navigation-buttons button {
-        padding: 8px; 
+        padding: 10px; 
+        width: 120px;
+        margin-right: 10px;
+
+
     }
 }
