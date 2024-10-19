@@ -1,6 +1,6 @@
-/* Global Reset */  
+/* Global Reset */
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 /* Global Styles */
@@ -8,80 +8,85 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #c2c2f0, #e6e6ff); 
+    background: linear-gradient(135deg, #c2c2f0, #e6e6ff);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
+    min-height: 100vh;
     color: #333;
 }
 
 /* Quiz, Result, and Home Containers */
 .quiz-container, .result-container, .home-container {
-    width: 500px;
-    max-width: 400px;
-    background-color: #fff; 
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 20px; 
+    border-radius: 20px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    text-align: center; 
+    text-align: center;
     transition: transform 0.3s ease;
 }
 
 .quiz-container:hover, .result-container:hover, .home-container:hover {
     transform: translateY(-8px);
 }
-.quiz-container h1{
+
+.quiz-container h1 {
     margin-top: 15px;
 }
-.home-container h1{
-    margin-bottom: 68px;
+
+.home-container h1 {
+    margin-bottom: 50px;
 }
-.home-container img{
+
+.home-container img {
     width: 220px;
     height: 220px;
     margin-top: 10px;
 }
+
 /* Progress Bar */
 .progress-bar {
-    background-color: #e9ecef; 
-    border-radius: 15px; 
-    height: 12px; 
+    background-color: #e9ecef;
+    border-radius: 15px;
+    height: 12px;
     margin-bottom: 20px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .progress-bar-fill {
-    background-color:#FF6347; 
-    height: 100%; 
-    border-radius: 15px; 
+    background-color:#FF6347;
+    height: 100%;
+    border-radius: 15px;
     transition: width 0.3s;
 }
 
 /* Question and Answer Buttons */
 h1, h2 {
-    margin: 0; 
+    margin: 0;
 }
 
 h2 {
-    font-size: 1.6rem; 
-    margin-bottom: 20px; 
+    font-size: 1.6rem;
+    margin-bottom: 20px;
 }
 
 .options button {
-    background-color: #FF6347; 
-    color: #fff; 
-    padding: 12px; 
-    width: 100%; 
-    margin: 12px 0; 
-    border: none; 
-    border-radius: 30px; 
-    transition: background-color 0.3s, box-shadow 0.2s; 
+    background-color: #FF6347;
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    margin: 12px 0;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s, box-shadow 0.2s;
+    cursor: pointer; 
 }
 
 .options button:hover {
-    background-color: #FF4500; 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    background-color: #FF4500;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Selected Button */
@@ -91,165 +96,176 @@ h2 {
 
 /* Navigation Buttons */
 .navigation-buttons {
-    margin-top: 20px; 
-    display: flex; 
-    justify-content: space-between; 
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .navigation-buttons button {
-    padding: 12px 24px; 
-    border-radius: 30px; 
-    border: none; 
-    font-size: 1.1rem; 
-    transition: background-color 0.3s, box-shadow 0.2s; 
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, box-shadow 0.2s;
+    cursor: pointer; 
 }
 
 .navigation-buttons button:first-child {
-    background-color: #6c757d; 
-    color: white; 
+    background-color: #6c757d;
+    color: white;
 }
 
 .navigation-buttons button:last-child {
-    background-color: #FF6347; 
-    color: white; 
+    background-color: #FF6347;
+    color: white;
 }
 
 /* Hover effect for navigation buttons */
 .navigation-buttons button:hover {
-    background-color: #FF4500; 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    background-color: #FF4500;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Timer Style */
 .timer {
-    font-size: 1.1rem; 
-    margin-top: 10px; 
-    color: #FF4500; 
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #FF4500;
 }
 
 /* Result Styling */
-.result-container {
-    width: 500px;
-    max-width: 400px; 
-    background-color: #fff; 
-    padding: 20px;
-    border-radius: 15px; 
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
-}
-
 .result-container h1 {
-    font-size: 2.2rem; 
-    margin-top: 175px;
+    font-size: 2.2rem;
+    margin-top: 75px;
 }
 
 .result-container .score {
-    font-size: 1.7rem; 
-    font-weight: bold; 
-    margin: 20px 0; 
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 20px 0;
 }
 
 /* Result Message */
 .result-message {
-    font-size: 1.3rem; 
-    margin: 10px 0; 
-    color: #333; 
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: #333;
 }
 
 /* Play Again Button */
 .play-again-button {
-    padding: 12px 24px; 
-    border-radius: 30px; 
-    border: none; 
-    background-color: #FF6347; 
-    color: white; 
-    transition: background-color 0.3s, box-shadow 0.2s; 
-    display: flex; 
-    align-items: center; 
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    background-color: #FF6347;
+    color: white;
+    transition: background-color 0.3s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 20px auto; 
+    margin: 20px auto;
     margin-top: 30px;
-    width: 55%; 
+    width: 55%;
+    cursor: pointer;
 }
 
 .play-again-button:hover {
     background-color: #FF4500;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .play-again-button i {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 /* Start Button */
 .start-button {
-    padding: 12px 24px; 
+    padding: 12px 24px;
     border-radius: 30px;
-    border: none; 
-    background-color: #FF6347; 
+    border: none;
+    background-color: #FF6347;
     color: white;
-    transition: background-color 0.3s, box-shadow 0.2s; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    margin: 20px auto; 
-    margin-top:0px;
-    width: 55%; 
+    transition: background-color 0.3s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    margin-top: 0px;
+    width: 55%;
+    cursor: pointer; 
 }
 
 .start-button:hover {
-    background-color: #FF4500; 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    background-color: #FF4500;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .start-button i {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 /* Home Container */
 .home-container {
-    display: flex; 
-
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 20px;
 }
 
 /* Logo Style */
 .quiz-logo {
-    width: 150px; 
-    height: 150px; 
-    margin-bottom: 10px; 
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
 }
 
 /* Responsive Design */
-@media (max-width: 1800px) {
+@media (max-width: 768px) {
     .quiz-container, .result-container, .home-container {
-        width: 800px; 
-        height: 600px;
-        padding: 10px; 
+        width: 90%;
+        padding: 15px;
     }
 
     h1 {
-        font-size: 1.5rem; 
+        font-size: 1.4rem;
     }
 
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .options button {
-        font-size: 0.9rem; 
-        width:300px;
+        font-size: 0.85rem;
     }
 
     .navigation-buttons button {
-        padding: 10px; 
-        width: 120px;
-        margin-right: 10px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
 
+@media (min-width: 1200px) {
+    .quiz-container, .result-container, .home-container {
+        width: 600px;
+        padding: 30px;
+    }
 
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .options button {
+        font-size: 1.2rem;
+    }
+
+    .navigation-buttons button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
     }
 }
